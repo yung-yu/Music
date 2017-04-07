@@ -315,6 +315,21 @@ $headerMenuHeight: 50px;
     }    
 }
 
+
+.box {
+    display: inline-block;
+    @include clearfix();
+    text-align: center;
+    
+    > div {
+    display: inline-block;
+    @include clearfix();
+    background-color: RGBA(255, 168, 141, 1.00);
+    border: 1px solid RGBA(239, 113, 74, 1.00);
+
+   }
+}
+
 #register {
     display: inline-block;
     width: 100%;
@@ -329,22 +344,15 @@ $headerMenuHeight: 50px;
         @include clearfix();
 
         .box {
-            display: inline-block;
-            @include clearfix();
             width: 60px;
             height: 100%;
             line-height: 150px;
-            text-align: center;
+
             
             > div {
-            display: inline-block;
-            @include clearfix();
-            margin-top: 45px; 
-            width: 60px;
-            height: 60px;
-            background-color: RGBA(255, 168, 141, 1.00);
-            border: 1px solid RGBA(239, 113, 74, 1.00);
-      
+                margin-top: 45px; 
+                width: 60px;
+                height: 60px;
            }
         }
         
@@ -556,10 +564,27 @@ $headerMenuHeight: 50px;
 
 }
 
+ul{
+    height: 100%;
+    color: RGBA(239, 103, 62, 1.00);
+
+    > li {
+        line-height: 20px;
+
+        > div {
+            display: inline-block;
+            float: left; 
+            font-size: 20px;
+            color: RGBA(159, 159, 159, 1.00);
+            @include clearfix();
+        }
+    }
+}
+
 #pay {
     display: inline-block;
     width: 100%;
-    height: 800px;
+    height: 100%;
     margin-top: 100px;
     text-align: center;
     @include clearfix();
@@ -574,8 +599,210 @@ $headerMenuHeight: 50px;
         }
     }
 
+    #paylist {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        @include clearfix();
+
+        .content {
+            height: 100%;
+            text-align: center;
+            padding-top: 60px;
+
+            .ticket {
+                display: inline-block;
+                float: left;
+                width: 100%;
+                height: 180px;
+                @include clearfix();
+                background-color: RGBA(244, 243, 244, 1.00);
+                margin-bottom: 20px;
+   
+                .box {
+                    float: left;
+                    width: 120px;
+                    height: 100%;
+                    line-height: 150px;
+                    margin-left: 30px;
+                    margin-top: 30px;
+                    > div {
+                        width: 120px;
+                        height: 120px;
+                        background-color: RGBA(255, 97, 51, 1.00);
+                   }
+                }
+
+                .list {
+                    display: inline-block;
+                    float: left;
+                    width: calc(100% - 180px - 190px);
+                    height: 100%;
+                    @include clearfix();
+                    > ul{
+                        height: 100%;
+                        color: RGBA(239, 103, 62, 1.00);
+
+                        > li {
+                            line-height: 20px;
+
+                            > div {
+                                display: inline-block;
+                                float: left; 
+                                font-size: 20px;
+                                color: RGBA(159, 159, 159, 1.00);
+                                @include clearfix();
+                            }
+                        }
+                    }
+                }
+
+                .readMore {
+                    width: 180px;
+                    padding-top: 60px;
+
+                    >button {
+                      width: 180px;
+                    } 
+                }
+               
+            }
+       }
+    }
+
 }
 
+
+#aboutMessage {
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    @include clearfix();
+    
+    .content {
+        height: 100%;
+    
+        .about {
+            display: inline-block;
+            float: left;
+            @include clearfix();
+            width: calc(100% / 2);
+            text-align: left;
+            padding-top:  30px;
+            .title {
+               font-size: 40px;
+               font-style: bold;
+               font-weight: 700;   
+            }
+
+            .msg {
+                font-size: 25px;
+                color: RGBA(166, 166, 166, 1.00);
+            }
+
+            .readMore {
+              height: 100px;
+              display: inline-block;
+              float: left;
+              text-align: left;
+              @include clearfix();
+ 
+            }
+        }
+
+        .contact {
+            display: inline-block;
+            float: left;
+            @include clearfix();
+            width: calc(100% / 2);
+            height: 100%;
+            text-align: left;
+            padding-top:  30px;
+            padding-left: 30px;
+
+            .title {
+               font-size: 40px;
+               font-style: bold;
+               font-weight: 700;   
+            }
+
+            .list {
+                display: inline-block;
+                float: left;
+                width: 100%;
+                height: 220px;
+                @include clearfix();
+                > ul{
+                  
+                    color: RGBA(239, 103, 62, 1.00);
+
+                    > li {
+                        line-height: 20px;
+
+                        > div {
+                            display: inline-block;
+                            float: left; 
+                            font-size: 20px;
+                            color: RGBA(159, 159, 159, 1.00);
+                            @include clearfix();
+                        }
+                    }
+                }
+            }
+
+            .follow {
+               font-size: 40px;
+               font-style: bold;
+               font-weight: 700;
+
+                .box {
+                    float: left;
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    > div {
+                        width: 40px;
+                        height: 40px;
+                        background-color: RGBA(157, 157, 157, 1.00);
+                        border: 0px;
+                        @include border-radius(4px);
+                   }
+                }
+            }
+        
+        }
+    }
+}
+
+#footer{
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    @include clearfix();
+    background-color: RGBA(25, 24, 27, 1.00);
+    
+    .content {
+        height: 100%;
+        text-align: center;
+
+        > div {
+            display: inline-block;
+            float: left;
+            @include clearfix();
+            width: calc(100%  / 2 );
+            height: 100%;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+            margin: 0 auto;
+            color: RGBA(65, 64, 68, 1.00);
+        }
+    }
+}
 
 
 
